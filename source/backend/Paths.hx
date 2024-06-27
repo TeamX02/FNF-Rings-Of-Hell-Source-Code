@@ -180,6 +180,8 @@ class Paths
 		#end
 		#if android
 		return Asset2File.getPath('assets/videos/$key.$VIDEO_EXT');
+		#elseif ios
+		return Sys.getCwd() + 'assets/videos/$key.$VIDEO_EXT';
 		#else
 		return 'assets/videos/$key.$VIDEO_EXT';
 		#end
